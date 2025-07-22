@@ -1,0 +1,6 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
+  "forwardPorts": [5000,3000],
+  "postCreateCommand": "pip install -r backend/requirements.txt && python backend/load_data.py",
+  "postStartCommand": "python backend/app.py & python -m http.server --directory frontend 3000"
+}
